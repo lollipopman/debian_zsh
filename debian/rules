@@ -40,8 +40,6 @@ CONFIGFLAGS += --enable-zsh-secure-free
 CONFIGFLAGS += --enable-zsh-hash-debug
 endif
 
-BUILT_USING=$(shell dpkg-query -f '$${source:Package} (= $${source:Version}), ' -W libcap-dev libncursesw5-dev libpcre3-dev eglibc)
-
 build: build-arch build-indep
 
 build-arch: configure-stamp
@@ -210,7 +208,7 @@ binary-arch: binary-arch-dynamic binary-arch-static binary-arch-dev
 	dh_compress   -a
 	dh_fixperms   -a
 	dh_installdeb -a
-	dh_gencontrol -a -- -VBuilt-Using="$(BUILT_USING)"
+	dh_gencontrol -a
 	dh_md5sums    -a
 	dh_builddeb   -a
 
