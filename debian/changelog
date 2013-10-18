@@ -1,3 +1,9 @@
+zsh (5.0.2-5~braintree+1) unstable; urgency=low
+
+  * Backport from sid
+
+ -- Jesse Hathaway <jesse@braintreepayments.com>  Fri, 18 Oct 2013 19:08:21 +0000
+
 zsh (5.0.2-5) unstable; urgency=low
 
   * [22bc9278,f7cf9ffb] Add patch to make test suite "-c" test more
